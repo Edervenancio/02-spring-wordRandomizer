@@ -4,7 +4,7 @@ package com.example.wordRandomizer.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Word")
+@Table(name="word")
 public class Word {
 
 
@@ -21,8 +21,7 @@ public class Word {
     private String randomizedText;
 
 
-    public Word(int id, String enteredText, String randomizedText) {
-        this.id = id;
+    public Word(String enteredText, String randomizedText) {
         this.enteredText = enteredText;
         this.randomizedText = randomizedText;
     }
@@ -30,6 +29,7 @@ public class Word {
     public Word(){
 
     }
+
 
     public int getId() {
         return id;
